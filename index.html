@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#6b1838" />
+    <meta name="description" content="Uma homenagem de aniversário cheia de amor e boas lembranças." />
+    <title>Feliz aniversário!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <canvas id="confetti" aria-hidden="true"></canvas>
+
+    <header class="topbar">
+      <a class="brand" href="#inicio" aria-label="Voltar ao início"><span>♥</span> Para <strong data-name>Minha Irmã</strong></a>
+      <nav aria-label="Navegação principal">
+        <a href="#carta">Carta</a><a href="#fotos">Fotos</a><a href="#momentos">Momentos</a><a href="#videos">Vídeos</a>
+      </nav>
+      <button class="music-button" id="musicButton" type="button" aria-pressed="false"><span class="music-icon">♪</span><span id="musicLabel">Tocar música</span></button>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-glow hero-glow-one"></div><div class="hero-glow hero-glow-two"></div>
+        <div class="hero-copy reveal">
+          <p class="eyebrow" id="heroEyebrow">Hoje o dia é todo seu</p>
+          <h1>Feliz aniversário,<br /><em data-name>Minha Irmã</em>!</h1>
+          <p class="hero-message" id="heroMessage"></p>
+          <div class="hero-actions">
+            <a class="button primary" href="#carta">Ler minha carta <span>↓</span></a>
+            <button class="button secondary" id="celebrateButton" type="button">Celebrar agora <span>✦</span></button>
+          </div>
+        </div>
+        <div class="hero-portrait reveal delay-one">
+          <div class="portrait-ring"><div class="portrait" id="heroPortrait" role="img" aria-label="Foto de aniversário"><span>Adicione aqui<br />uma foto especial</span></div></div>
+          <span class="orbit orbit-one">✦</span><span class="orbit orbit-two">♥</span><span class="orbit orbit-three">✧</span>
+          <div class="date-card"><small>UM DIA PARA LEMBRAR</small><strong id="birthdayDate">Hoje & sempre</strong></div>
+        </div>
+        <a class="scroll-hint" href="#carta" aria-label="Continuar para a carta"><span></span> role para sentir o carinho</a>
+      </section>
+
+      <section class="letter-section section" id="carta">
+        <div class="section-heading reveal"><p class="eyebrow">De coração para coração</p><h2>Uma carta para você</h2></div>
+        <article class="letter reveal">
+          <span class="quote-mark">“</span>
+          <div id="letterText"></div>
+          <footer><span>Com todo meu amor,</span><strong id="senderName">Seu irmão / sua irmã</strong></footer>
+        </article>
+      </section>
+
+      <section class="gallery-section section" id="fotos">
+        <div class="section-heading reveal"><p class="eyebrow">Um álbum para celebrar você</p><h2>Fotos de uma pessoa incrível</h2><p>Cada imagem revela um pouco da sua luz e do seu jeito especial.</p></div>
+        <div class="gallery" id="photoGallery"></div>
+      </section>
+
+      <section class="timeline-section section" id="momentos">
+        <div class="section-heading reveal"><p class="eyebrow">Uma vida de histórias</p><h2>Nossos momentos especiais</h2></div>
+        <div class="timeline" id="timeline"></div>
+      </section>
+
+      <section class="video-section section" id="videos">
+        <div class="section-heading reveal"><p class="eyebrow">Aperte o play</p><h2>Recados feitos para você</h2><p>Porque algumas emoções merecem ser vistas e ouvidas.</p></div>
+        <div class="video-grid" id="videoGrid"></div>
+      </section>
+
+      <section class="closing section">
+        <div class="closing-card reveal">
+          <span class="closing-star">✦</span><p class="eyebrow">Um novo ciclo começa</p>
+          <h2>Que a vida continue<br />te presenteando com <em>coisas lindas.</em></h2>
+          <p id="closingMessage"></p>
+          <button class="button light" id="finalCelebrateButton" type="button">Soltar confetes <span>♥</span></button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer"><p>Feito com <span>♥</span> especialmente para <strong data-name>Minha Irmã</strong></p><small id="footerYear"></small></footer>
+    <audio id="birthdayMusic" loop preload="none"></audio>
+    <script src="config.js"></script><script src="script.js"></script>
+  </body>
+</html>
